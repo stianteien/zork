@@ -1,0 +1,66 @@
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(circle at top, #f9fbff 0%, #edf2ff 60%, #e4ecff 100%);
+  color: #27304b;
+  font-family: "IBM Plex Mono", "Fira Code", monospace;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  background: rgba(247, 249, 255, 0.9);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(166, 186, 237, 0.35);
+  box-shadow: 0 8px 18px -16px rgba(50, 72, 128, 0.6);
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  letter-spacing: 0.08em;
+  color: #1f2a44;
+}
+
+.app-header nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.app-header a {
+  color: #3f4f7d;
+  text-decoration: none;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  padding: 0.45rem 0.95rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+  border: 1px solid transparent;
+}
+
+.app-header a:hover,
+.app-header a.active {
+  background: rgba(155, 178, 241, 0.28);
+  border-color: rgba(129, 153, 234, 0.45);
+  color: #25335c;
+}
+
+.app-main {
+  flex: 1;
+  padding: 2rem;
+}
+
+@media (max-width: 640px) {
+  .app-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .app-main {
+    padding: 1.2rem;
+  }
+}

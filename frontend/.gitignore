@@ -1,0 +1,9 @@
+node_modules
+dist
+*.log
+.DS_Store
+*.local
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+*.tsbuildinfo

@@ -1,0 +1,20 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #eef2ff;
+  color: #27304b;
+}
+
+#root {
+  height: 100%;
+}
+
+button {
+  font-family: inherit;
+}
