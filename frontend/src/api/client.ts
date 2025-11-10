@@ -1,5 +1,11 @@
+const runtimeBaseUrl =
+  typeof window === "undefined"
+    ? undefined
+    : window.__ENV__?.VITE_GAME_API_BASE_URL;
+
 const BASE_URL =
-  import.meta.env.VITE_GAME_API_BASE_URL?.replace(/\/$/, "") ??
+  normalizeBaseUrl(runtimeBaseUrl) ??
+  normalizeBaseUrl(import.meta.env.VITE_GAME_API_BASE_URL) ??
   "http://127.0.0.1:8005";
 
 const SESSIONS_ENDPOINT = normalizePath(
@@ -180,4 +186,12 @@ function normalizePath(value: string): string {
   }
 
   return value.startsWith("/") ? value : `/${value}`;
+}
+
+function normalizeBaseUrl(value?: string): string | undefined {
+  if (!value || value === "$VITE_GAME_API_BASE_URL") {
+    return undefined;
+  }
+
+  return value.replace(/\/$/, "");
 }
