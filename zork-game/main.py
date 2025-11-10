@@ -91,7 +91,7 @@ app = FastAPI(
     ),
     servers=[
         {
-            "url": "http://127.0.0.1:8005",
+            "url": "https://zork-backend.ashysmoke-24a55190.norwayeast.azurecontainerapps.io/",
             "description": "Local development server",
         }
     ],
